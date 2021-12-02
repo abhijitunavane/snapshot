@@ -4,7 +4,7 @@ Snap Shot is a gallery created using React,React Hooks. Also the images were dis
 
 # Motivation
 
-The purpose of this project was to get familiar with React Hooks and Context API.
+The purpose of this project was to get familiar with React Hooks.
 
 ## Available Scripts
 
