@@ -1,0 +1,19 @@
+.logo {
+    padding: 30px;
+}
+.logoText {
+    font-size: 60px;
+    text-align: center;
+    font-family: monospace, Arial;
+    font-weight: bolder;
+}
+
+
+@media (max-width: 650px) {
+    .logo {
+        padding: 10px;
+    }
+    .logoText {
+        font-size: 40px;
+    }
+}
