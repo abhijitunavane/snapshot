@@ -10,3 +10,9 @@
 .images:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 360px) {
+  .images {
+    width: 150px;
+}
+}

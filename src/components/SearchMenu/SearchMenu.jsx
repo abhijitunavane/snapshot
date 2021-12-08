@@ -1,19 +1,23 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+// import styles from "./SearchMenu.module.css";
 
-import styles from "./SearchMenu.module.css";
-
-const SearchMenu = ({ onSearch, setUrls}) => {
-  const handleClick = (e) => {
-    setUrls([]);
-    onSearch(e.target.innerText);
-  }
+const SearchMenu = () => {
   return (
     <div className="container pb-5">
       <div className="d-flex justify-content-center flex-column flex-sm-row ">
-        <button className="btn btn-primary m-2 pe-auto" onClick={handleClick}>Cat</button>
-        <button className="btn btn-primary m-2 pe-auto" onClick={handleClick}>Dog</button>
-        <button className="btn btn-primary m-2 pe-auto" onClick={handleClick}>Mountain</button>
-        <button className="btn btn-primary m-2 pe-auto" onClick={handleClick}>Cars</button>
+        <NavLink className="btn btn-primary m-2 pe-auto" to="/search/q=Cat">
+          Cat
+        </NavLink>
+        <NavLink className="btn btn-primary m-2 pe-auto" to="/search/q=Dog">
+          Dog
+        </NavLink>
+        <NavLink className="btn btn-primary m-2 pe-auto" to="/search/q=Mountain">
+          Mountain
+        </NavLink>
+        <NavLink className="btn btn-primary m-2 pe-auto" to="/search/q=Cars">
+          Cars
+        </NavLink>
       </div>
     </div>
   );

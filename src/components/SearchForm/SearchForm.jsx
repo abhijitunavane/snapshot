@@ -4,17 +4,16 @@ import styles from "./SearchForm.module.css";
 
 const SearchForm = ({ setUrls, onSearch}) => {
 const [query, setQuery] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch(query);    
-  }
   const handleChange = (e) => {
+    if(e.target.value === "")
+    {
+      return;
+    }
     setQuery(e.target.value);
-    setUrls([]);
   }
   return (
     <div className="container p-4 p-md-5">
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className={styles.form} action={"q=" + query}>
         <input onChange={handleChange} className="form-control" type="search" placeholder="Cat" />
         <button className="btn btn-primary" type="submit">
           <i className="bi bi-search"></i>

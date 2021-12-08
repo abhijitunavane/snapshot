@@ -1,7 +1,16 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./Gallary.module.css";
+import { get_photos } from "../../api/index";
 
-const Gallary = ({urls}) => {
+const Gallary = ({ q }) => {
+  const [urls, setUrls] = useState([]);  
+  useEffect(() => {
+    const fetchAPI = async () => {
+      const urls_array = await get_photos(q);      
+      setUrls(urls_array);
+    };
+    fetchAPI();
+  }, [q]);
   if (urls.length < 1) {
     return (<div className="text-center fs-1">Fetching...</div>);
   }
