@@ -13,7 +13,7 @@ const [query, setQuery] = useState("");
   }
   return (
     <div className="container p-4 p-md-5">
-      <form className={styles.form} action={"q=" + query}>
+      <form className={styles.form} action={"/search/q=" + query}>
         <input onChange={handleChange} className="form-control" type="search" placeholder="Cat" />
         <button className="btn btn-primary" type="submit">
           <i className="bi bi-search"></i>
